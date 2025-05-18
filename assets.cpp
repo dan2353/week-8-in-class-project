@@ -5,8 +5,18 @@
 #include "assets.h"
 #include <sstream>
 
-Assets::Assets() : _name(""), _tags(nullptr), _numTags(0) {}
-Assets::Assets(const string& name) : _name(name), _tags(nullptr), _numTags(0) {}
+Assets::Assets() {
+    _name = "";
+    _tags = nullptr;
+    _numTags = 0;
+}
+
+Assets::Assets(const string& name) {
+    _name = name;
+    _tags = nullptr;
+    _numTags = 0;
+}
+
 Assets::Assets(const Assets& other) {
     _name = other._name;
     _numTags = other._numTags;
